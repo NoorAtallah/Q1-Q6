@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Q1
+        
+        function reverses_no(x) {
+            
+      return parseInt(x.toString().split('').reverse().join(''));
+  
+}
+console.log(reverses_no(5478))
+
+
+//Q2
+
+function even_odd (y){
+   
+    
+    for ( i =0 ; i<=15; i++)
+    if (i===0){
+        console.log(i + " " + "is even")
+
+    }
+    else if (i%2===0){
+        console.log(i+ " " +"is even")
+    }
+ else {
+    console.log(i+" "+ "is odd")
+ }
+    
+}
+
+console.log(even_odd())
+
+
+
+
+//Q3
+function makeAlphabet(str) {
+  var arr = str.split('');
+  arr.sort();
+  return arr.join('').trim().toLowerCase();
+}
+console.log(makeAlphabet("Hello world"))
+
+//Q4
+function dash() {
+    let num = window.prompt("Enter a number:");
+    let str = num.toString();
+    let result = [str[0]];
+
+    for (var x = 1; x < str.length; x++) {
+        if (!isNaN(parseInt(str[x - 1])) && !isNaN(parseInt(str[x]))) {
+            if (parseInt(str[x - 1]) % 2 === 0 && parseInt(str[x]) % 2 === 0) {
+                result.push('-', str[x]);
+            } else {
+                result.push(str[x]);
+            }
+        } else {
+            result.push(str[x]);
+        }
+    }
+    return result.join('');
+}
+
+
+console.log(dash());
+
+
+
+
+
+
+
+//Q5
+function Agechecker(age) {
+    return age >= 18 ? "The user is Adult" : "The user is Minor";
+}
+
+var userAge = parseInt(prompt("Enter your age:"));
+console.log(Agechecker(userAge));
+
+    </script>
+</body>
+</html>
